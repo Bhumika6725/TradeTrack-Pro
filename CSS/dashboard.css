@@ -168,3 +168,36 @@ tr:nth-child(even){
     background:#f8fafc;
 
 }
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:#0f172a;
+    color:white;
+    padding:30px;
+}
+
+.sidebar h2{
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:15px 0;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    color:#38bdf8;
+}
+
+.main-content{
+    flex:1;
+    padding:40px;
+}

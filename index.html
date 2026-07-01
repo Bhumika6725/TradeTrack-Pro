@@ -4,137 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeTrack | Trading Dashboard</title>
+    <title>TradeTrack Pro | Login</title>
 
-    <link rel="stylesheet" href="style.css">
-
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <div class="container">
 
-    <nav>
+        <!-- Left Section -->
+        <div class="left-panel">
 
-        <div class="logo">
+            <h1>📈 TradeTrack Pro</h1>
 
-            <h2>TradeTrack</h2>
+            <h2>Professional Trading Journal</h2>
 
-        </div>
+            <p>
+                Track Every Trade.<br>
+                Improve Every Decision.
+            </p>
 
-        <ul>
+            <div class="features">
 
-            <li><a href="#">Dashboard</a></li>
+                <div>✔ Track Profit & Loss</div>
+                <div>✔ Analyze Win Rate</div>
+                <div>✔ View Performance Analytics</div>
+                <div>✔ Build Better Trading Habits</div>
 
-            <li><a href="#">History</a></li>
-
-            <li><a href="#">Analytics</a></li>
-
-            <li><a href="#">Add Trade</a></li>
-
-        </ul>
-
-    </nav>
-
-    <!-- Hero Section -->
-
-    <section class="hero">
-
-        <h1>Welcome Back 👋</h1>
-
-        <p>Track every trade. Improve every decision.</p>
-
-    </section>
-
-    <!-- Cards -->
-
-    <section class="cards">
-
-        <div class="card">
-            <h3>Total Trades</h3>
-            <h2>125</h2>
-        </div>
-
-        <div class="card">
-            <h3>Win Rate</h3>
-            <h2>68%</h2>
-        </div>
-
-        <div class="card">
-            <h3>Net Profit</h3>
-            <h2 class="profit">₹42,500</h2>
-        </div>
-
-        <div class="card">
-            <h3>Avg RR</h3>
-            <h2>1 : 2.4</h2>
-        </div>
-
-    </section>
-
-    <!-- Chart -->
-
-    <section class="chart">
-
-        <h2>Performance Overview</h2>
-
-        <div class="chart-box">
-
-            Chart Coming Soon...
+            </div>
 
         </div>
 
-    </section>
+        <!-- Right Section -->
+        <div class="right-panel">
 
-    <!-- Recent Trades -->
+            <div class="login-card">
 
-    <section class="history">
+                <h2>Welcome Back 👋</h2>
 
-        <h2>Recent Trades</h2>
+                <p>Login to continue your trading journey.</p>
 
-        <table>
+                <form id="loginForm">
 
-            <tr>
+                    <label>Username</label>
 
-                <th>Stock</th>
-                <th>Profit</th>
-                <th>Strategy</th>
-                <th>Date</th>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter Username"
+                        required>
 
-            </tr>
+                    <label>Password</label>
 
-            <tr>
+                    <div class="password-box">
 
-                <td>TCS</td>
-                <td class="profit">+1200</td>
-                <td>Breakout</td>
-                <td>21 Jun</td>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter Password"
+                            required>
 
-            </tr>
+                        <span id="togglePassword">👁️</span>
 
-            <tr>
+                    </div>
 
-                <td>RELIANCE</td>
-                <td class="loss">-600</td>
-                <td>Pullback</td>
-                <td>20 Jun</td>
+                    <div class="options">
 
-            </tr>
+                        <label>
 
-            <tr>
+                            <input type="checkbox">
 
-                <td>SBIN</td>
-                <td class="profit">+950</td>
-                <td>Trend</td>
-                <td>18 Jun</td>
+                            Remember Me
 
-            </tr>
+                        </label>
 
-        </table>
+                        <a href="#">Forgot Password?</a>
 
-    </section>
+                    </div>
+
+                    <button type="submit">
+
+                        Login
+
+                    </button>
+
+                    <p id="errorMessage"></p>
+
+                    <div class="signup">
+
+                        Don't have an account?
+
+                        <a href="#">Sign Up</a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/login.js"></script>
 
 </body>
 
