@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trade History | TradeTrack Pro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../CSS/history.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>📈 TradeTrack Pro</h2>
+
+</div>
+
+<ul class="menu">
+
+<li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+<li><a href="addTrade.html">➕ Add Trade</a></li>
+
+<li class="active"><a href="history.html">📜 Trade History</a></li>
+
+<li><a href="analytics.html">📊 Analytics</a></li>
+
+<li><a href="riskCalculator.html">💰 Risk Calculator</a></li>
+
+<li><a href="settings.html">⚙️ Settings</a></li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main-content">
+
+<h1>📜 Trade History</h1>
+
+<p>View and manage all your saved trades.</p>
+
+<br>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Stock</th>
+
+<th>Type</th>
+
+<th>Entry</th>
+
+<th>Exit</th>
+
+<th>Qty</th>
+
+<th>P/L</th>
+
+<th>Strategy</th>
+
+<th>Emotion</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tradeTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="../JS/history.js"></script>
+
+</body>
+
+</html>

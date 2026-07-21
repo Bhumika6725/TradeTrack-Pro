@@ -1,55 +1,119 @@
+// ======================================
+// TradeTrack Pro - Login
+// ======================================
+
+// Elements
+// ==============================
+// Apply Saved Theme
+// ==============================
+
+
+
+const loginForm = document.getElementById("loginForm");
+
+const password = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
+
+const errorMessage = document.getElementById("errorMessage");
+
 // ===============================
 // Show / Hide Password
 // ===============================
 
-const passwordInput = document.getElementById("password");
-const togglePassword = document.getElementById("togglePassword");
+togglePassword.addEventListener("click", () => {
 
-togglePassword.addEventListener("click", function () {
+    if (password.type === "password") {
 
-    if (passwordInput.type === "password") {
-
-        passwordInput.type = "text";
+        password.type = "text";
         togglePassword.textContent = "🙈";
 
     } else {
 
-        passwordInput.type = "password";
+        password.type = "password";
         togglePassword.textContent = "👁️";
 
     }
 
 });
 
-
 // ===============================
-// Login Validation
+// Login
 // ===============================
 
-const loginForm = document.getElementById("loginForm");
+loginForm.addEventListener("submit", (e) => {
 
-loginForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
+    e.preventDefault();
 
     const username = document.getElementById("username").value.trim();
 
-    const password = document.getElementById("password").value.trim();
+    const pass = password.value;
 
-    const errorMessage = document.getElementById("errorMessage");
+    const remember = document.getElementById("remember").checked;
 
-    if (username === "admin" && password === "1234") {
+    errorMessage.innerHTML = "";
 
-        alert("Login Successful ✅");
+    // Get All Users
+
+    const users = JSON.parse(localStorage.getItem("tradeTrackUsers")) || [];
+
+    // Find User
+
+    const user = users.find(
+
+        u => u.username === username && u.password === pass
+
+    );
+
+    if (!user) {
+
+        errorMessage.style.color = "#ef4444";
+        errorMessage.innerHTML = "Invalid Username or Password.";
+
+        return;
+
+    }
+
+    // Login Success
+
+    localStorage.setItem("isLoggedIn", "true");
+
+    localStorage.setItem("currentUser", JSON.stringify(user));
+
+    if (remember) {
+
+        localStorage.setItem("rememberUser", username);
+
+    } else {
+
+        localStorage.removeItem("rememberUser");
+
+    }
+
+    errorMessage.style.color = "#22c55e";
+    errorMessage.innerHTML = "Login Successful...";
+
+    setTimeout(() => {
 
         window.location.href = "dashboard.html";
 
-    }
-
-    else {
-
-        errorMessage.textContent = "Invalid Username or Password";
-
-    }
+    }, 1000);
 
 });
+
+// ===============================
+// Remember Username
+// ===============================
+
+window.onload = () => {
+
+    const remembered = localStorage.getItem("rememberUser");
+
+    if (remembered) {
+
+        document.getElementById("username").value = remembered;
+
+        document.getElementById("remember").checked = true;
+
+    }
+
+};

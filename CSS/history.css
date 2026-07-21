@@ -1,0 +1,259 @@
+/* ==========================================
+   TradeTrack Pro
+   Trade History CSS
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar{
+
+    width:260px;
+
+    background:#111827;
+
+    color:white;
+
+    padding:30px 20px;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.logo h2{
+
+    font-size:26px;
+
+}
+
+.menu{
+
+    list-style:none;
+
+}
+
+.menu li{
+
+    margin-bottom:12px;
+
+}
+
+.menu li a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.menu li a:hover{
+
+    background:#1f2937;
+
+}
+
+.menu li.active a{
+
+    background:#2563eb;
+
+}
+
+/* ================= Main ================= */
+
+.main-content{
+
+    flex:1;
+
+    padding:40px;
+
+}
+
+.main-content h1{
+
+    font-size:35px;
+
+    margin-bottom:10px;
+
+}
+
+.main-content p{
+
+    color:#6b7280;
+
+    margin-bottom:25px;
+
+}
+
+/* ================= Table ================= */
+
+.table-container{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:auto;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:1500px;
+
+}
+
+th{
+
+    background:#111827;
+
+    color:white;
+
+    padding:16px;
+
+    font-weight:500;
+
+    text-align:center;
+
+}
+
+td{
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+tbody tr:hover{
+
+    background:#eef4ff;
+
+}
+
+/* ================= Profit Loss ================= */
+
+.profit{
+
+    color:#16a34a;
+
+    font-weight:600;
+
+}
+
+.loss{
+
+    color:#dc2626;
+
+    font-weight:600;
+
+}
+
+/* ================= Buttons ================= */
+
+.edit-btn{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-right:6px;
+
+}
+
+.edit-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.delete-btn{
+
+    border:none;
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.delete-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:900px){
+
+.container{
+
+    flex-direction:column;
+
+}
+
+.sidebar{
+
+    width:100%;
+
+}
+
+.main-content{
+
+    padding:20px;
+
+}
+
+}
